@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex">
+<title>Toehold</title>
+<link rel="icon" href="/toehold/favicon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600&display=swap" rel="stylesheet">
+<style>body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#FBFAF7;color:#1F4D3F;font-family:-apple-system,system-ui,sans-serif}
+.b{text-align:center;padding:16px}.m{display:flex;align-items:center;justify-content:center;gap:10px}.m svg{width:56px;height:56px}.wm{font-family:Fraunces,Georgia,serif;font-weight:600;font-size:34px;letter-spacing:-.01em}
+.lt{fill:#1F4D3F}.ld{fill:#B8955A}p{color:#4E5664;font-size:15px}a{color:#1F4D3F}#go{visibility:hidden}
+@media (prefers-color-scheme:dark){body{background:#14130F;color:#F4EFE4}.lt{fill:#F4EFE4}.ld{fill:#D4B57A}p{color:#BDB6A6}a{color:#F4EFE4}}</style>
+</head><body><div class="b">
+<div class="m"><svg viewBox="0 0 100 100" aria-hidden="true"><path class="lt" d="M41 22 L55 12 L55 70 Q55 80 64 80 Q70 80 75 76 L78 80 Q70 90 59 90 Q41 90 41 71 L41 45 L27 45 L27 37 L41 37 Z"/><path class="ld" d="M59 35 Q67 29 76 32 Q82 35 79 42 Q74 47 63 45 Q57 43 59 35 Z"/></svg><span class="wm">Toehold</span></div>
+<p>Opening Toehold… / 正在打开 Toehold…</p><p><a id="go" href="https://third-mathematical-spoken-productivity.trycloudflare.com/">Tap here if nothing happens · 没有跳转请点这里</a></p></div>
+<script>
+var F="https://third-mathematical-spoken-productivity.trycloudflare.com",done=false;
+function go(u){if(done)return;done=true;u=(u||F).replace(/\/$/,"");var t=u+"/"+(location.hash||"");var a=document.getElementById("go");a.href=t;location.replace(t);setTimeout(function(){a.style.visibility="visible"},1500);}
+setTimeout(function(){go(F)},4000);
+fetch("/toehold/url.json?t="+Date.now(),{cache:"no-store"}).then(function(r){return r.json()}).then(function(j){go(j.url)}).catch(function(){go(F)});
+</script>
+</body></html>
