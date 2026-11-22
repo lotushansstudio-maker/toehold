@@ -1,0 +1,8 @@
+<!doctype html><html lang="zh"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><title>Toehold 后台 · AI用量</title>
+<style>body{font:15px -apple-system,system-ui,sans-serif;margin:0;display:grid;place-items:center;min-height:100vh;background:#f6f7f9;color:#1b2430}@media(prefers-color-scheme:dark){body{background:#12161c;color:#e4e8ee}}p{max-width:30em;padding:0 16px;text-align:center}</style></head>
+<body><p id="m">正在打开 Toehold 后台（AI用量）…</p>
+<script>
+fetch('../url.json',{cache:'no-store'}).then(r=>r.json()).then(j=>{location.replace(j.url.replace(/\/$/,'')+'/admin/usage');})
+.catch(()=>{document.getElementById('m').textContent='暂时找不到网站当前地址，请稍后刷新，或回到首页。';});
+</script></body></html>
